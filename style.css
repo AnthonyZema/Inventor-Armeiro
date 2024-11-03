@@ -1,0 +1,146 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Alterei a fonte para Arial */
+}
+
+/* Body */
+body {
+    display: flex;
+    background-color: #f4f6f8; /* Cor de fundo mais suave */
+    color: #333;
+    padding: 20px;
+}
+
+/* Sidebar */
+#Links {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px; /* Largura aumentada para mais espaço */
+    background-color: #34495e; /* Cor de fundo da barra lateral */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    gap: 15px;
+    padding-top: 20px; /* Espaço extra no topo */
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2); /* Sombra mais suave */
+    border-radius: 0 15px 15px 0; /* Cantos arredondados */
+}
+
+
+#Links h2 {
+    color: #ecf0f1; /* Cor dos títulos do menu */
+    margin-bottom: 20px;
+}
+
+#Links h3 {
+    font-size: 1.2em;
+}
+
+#Links a {
+    text-decoration: none;
+    color: #ecf0f1; /* Cor do texto dos links */
+    padding: 10px 15px;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s; /* Adiciona um efeito de transformação */
+    font-weight: bold;
+}
+
+#Links a:hover {
+    background-color: #1abc9c; /* Cor ao passar o mouse */
+    transform: translateY(-2px); /* Leve movimento ao passar o mouse */
+}
+
+/* Main content area */
+.main-content {
+    margin-left: 270px; /* Espaço para a barra lateral */
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os blocos horizontalmente */
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.8em; /* Tamanho do título aumentado */
+    color: #2c3e50; /* Cor do título */
+    background: linear-gradient(to right, #2c3e50, #2980b9); /* Gradiente mais suave */
+    -webkit-background-clip: text;
+    color: transparent;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Sombra do texto */
+}
+
+/* Section Containers */
+#Atributos, #Sub-Atributos, #Status, #Tudo, #Bolso de Materiais, #Bolso de Acessórios, #Bolso de Armas, #Bolso de Itens Úteis, #Bolso de Equipamentos, #Leviatã - Grau 2, #Lápis do Encantador {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    padding: 20px;
+    width: 100%;
+    max-width: 600px; /* Limita a largura dos blocos */
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Sombra dos blocos */
+}
+
+/* Titles */
+h2 {
+    font-size: 2em; /* Tamanho do título aumentado */
+    color: #2980b9; /* Cor dos títulos das seções */
+    text-align: center;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+/* Attribute items */
+p {
+    font-size: 1.1em;
+    margin: 8px 0;
+    color: #555;
+    display: flex;
+    align-items: center;
+}
+
+p::before {
+    content: "\2022";
+    color: #2980b9; /* Cor dos marcadores */
+    margin-right: 8px;
+    font-size: 1.4em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #Links {
+        width: 200px; /* Largura reduzida em telas menores */
+    }
+
+    .main-content {
+        margin-left: 220px; /* Ajuste do espaço */
+    }
+
+    header h1 {
+        font-size: 2.2em; /* Reduzir o tamanho do título */
+    }
+
+    h2 {
+        font-size: 1.6em; /* Tamanho dos subtítulos reduzido */
+    }
+
+    p {
+        font-size: 1em
